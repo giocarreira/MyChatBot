@@ -2,14 +2,6 @@ from datetime import datetime
 import sys
 import time
 
-def efeito_digitacao(texto, delay=0.03):
-    print("\nAssistente: ", end="")
-    for letra in texto:
-        print(letra, end="")
-        sys.stdout.flush()
-        time.sleep(delay)
-    print("\n")
-
 def escolher_chain(mensagem, data_hoje, chain_geral, chain_resumo, chain_intencao):
     try:
         resposta_intencao = chain_intencao.invoke({
@@ -27,3 +19,4 @@ def escolher_chain(mensagem, data_hoje, chain_geral, chain_resumo, chain_intenca
 
 def resposta_interface(texto):
     return texto
+
