@@ -17,6 +17,5 @@ def escolher_chain(mensagem, data_hoje, chain_geral, chain_resumo, chain_intenca
         print(f"Erro ao classificar intenção: {e}")
         return chain_geral
 
-def resposta_interface(texto):
-    return texto
+
 
