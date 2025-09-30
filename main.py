@@ -71,7 +71,7 @@ chain_intencao = LLMChain(
     memory = memoria
 )
 
-st.title("ChatBot Gigi Carreira")
+st.title("DialogAI")
 
 if "historico" not in st.session_state:
     st.session_state.historico = []
@@ -91,10 +91,11 @@ if entrada_usuario:
 
     chain_escolhida = escolher_chain(entrada_usuario, data_hoje, chain_geral, chain_resumo, chain_intencao)      
 
-    resposta = chain_escolhida.invoke({
-        "data" : data_hoje,
-        "mensagem_usuario" : entrada_usuario,
-    })
+    with st.spinner("DialogAI está pensando..."):
+        resposta = chain_escolhida.invoke({
+            "data" : data_hoje,
+            "mensagem_usuario" : entrada_usuario,
+        })
         
     st.session_state.historico.append(("assistant", resposta["text"]))
     with st.chat_message("assistant"):
@@ -104,5 +105,6 @@ if entrada_usuario:
             texto += letra
             placeholder.markdown(texto)
             time.sleep(0.018)
+
 
 
