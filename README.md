@@ -1,6 +1,6 @@
-# Chatbot Gigi Carreira
+# DialogAI
 
-Esse é um projeto pessoal que desenvolvi para criar um chatbot interativo usando LangChain com Azure OpenAI e Streamlit para fornecer interface gráfica. O assistente se chama **Gigi Carreira** e foi desenvolvido para responder de forma clara, objetiva e com um toque mais humano, adaptando o tom da conversa de acordo com a energia da mensagem do usuário.
+Esse é um projeto pessoal que desenvolvi para criar um chatbot interativo usando LangChain com Azure OpenAI e Streamlit para fornecer interface gráfica. O assistente se chama **DialogAI** e foi desenvolvido para responder de forma clara, objetiva e com um toque mais humano, adaptando o tom da conversa de acordo com a energia da mensagem do usuário.
 
 ---
 
