@@ -3,7 +3,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.memory import ConversationBufferMemory
 from dotenv import load_dotenv
-from utilidades import resposta_interface, escolher_chain
+from utilidades import escolher_chain
 from prompts import prompts_personalizados
 from datetime import datetime
 import streamlit as st
@@ -105,6 +105,7 @@ if entrada_usuario:
             texto += letra
             placeholder.markdown(texto)
             time.sleep(0.018)
+
 
 
 
